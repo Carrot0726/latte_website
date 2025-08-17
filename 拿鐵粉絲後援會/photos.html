@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的照片 - 這是拿鐵的專頁唷</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- 頁面標題 -->
+  <section class="sub-hero">
+    <h1>📸 我的照片</h1>
+  </section>
+
+  <!-- 照片檢視器 -->
+  <main class="photo-viewer" 
+        data-images='[
+          "images/latte1.jpg",
+          "images/latte2.jpg",
+          "images/latte3.jpg",
+          "images/latte4.jpg",
+          "images/latte5.jpg"
+        ]'>
+    <button class="pv-btn pv-prev" aria-label="上一張">‹</button>
+
+    <img class="pv-img" src="images/latte1.jpg" alt="拿鐵的照片">
+
+    <button class="pv-btn pv-next" aria-label="下一張">›</button>
+
+    <div class="pv-indicator" aria-live="polite">1 / 5</div>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    <a href="fansclub.html">
+      <span>回首頁</span>
+    </a>
+  </footer>
+
+</body>
+</html>
