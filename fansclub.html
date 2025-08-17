@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>這是拿鐵的專頁唷</title>
+
+  <!-- 備援中文字體（遇到缺字時自動退回） -->
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* 匯入字體（把 JasonHandwriting5.ttf 放到 /fonts/） */
+    @font-face {
+      font-family: "JasonHandwriting";
+      src: url("fonts/JasonHandwriting5.ttf") format("truetype");
+      font-display: swap;
+    }
+
+    :root{
+      --pink:#ff8fc7;
+      --pink-dark:#ff6fb6;
+      --pink-shadow:#e46aa3;
+      --bg:#ffe6f0;
+      --text:#44353a;
+    }
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin:0;
+      font-family: "JasonHandwriting","Zen Maru Gothic","Noto Sans TC",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+      letter-spacing: .5px;
+      line-height: 1.7;
+    }
+
+    /* --- HERO 區塊（大圖＋中間文字＋導覽） --- */
+    .hero{
+      position: relative;
+      width:100%;
+      height:520px; /* 需要更高可調 */
+      overflow:hidden;
+      border-bottom: 2px solid #ffd4e6;
+    }
+    .hero-img{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      object-fit:cover;
+      filter: brightness(.82);
+    }
+    .hero-content{
+      position:absolute; inset:0;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      gap:12px;
+      color:#ffffff;
+      padding: 0 16px;
+      text-shadow: 0 4px 0 #fa82b0;
+    }
+    .hero-content h1{
+      margin:0;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+    }
+    .hero-content p{
+      margin: 4px 0 14px;
+      font-size: clamp(1.1rem, 2.6vw, 1.4rem);
+    }
+
+    /* 導覽按鈕（放在 HERO 內） */
+    .main-nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      justify-content:center;
+    }
+    .main-nav a{
+      display:inline-block;
+      padding:10px 16px;
+      background: var(--pink);
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      border-radius: 999px;
+      box-shadow: 0 2px 0 var(--pink-shadow);
+      transition: transform .12s ease, box-shadow .12s ease, background .2s ease;
+    }
+    .main-nav a:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 4px 0 var(--pink-shadow);
+      background: var(--pink-dark);
+    }
+
+    /* 左上角 Instagram 連結（在 HERO 上方） */
+    .ig-link{
+      position:absolute; top:14px; left:14px;
+      background: rgba(255,255,255,.8);
+      color:#d63384;
+      text-decoration:none;
+      padding:6px 10px;
+      border-radius: 999px;
+      font-weight:700;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 1px 0 #ffffff, 0 2px 0 #ffd4ea;
+    }
+    .ig-link:hover{ background:#fff; }
+
+    /* --- 頁尾：圖片＋回首頁字樣 --- */
+    footer{
+      margin-top: 28px;
+      background:#fff0f5;
+      padding: 20px 12px 28px;
+      border-top: 2px solid #ffb6c1;
+    }
+    footer a{
+      display:inline-flex;
+      flex-direction:column;
+      align-items:center;
+      gap:6px;
+      color: var(--pink-dark);
+      text-decoration:none;
+      font-weight:700;
+    }
+    footer img{
+      width:56px;
+      height:auto;
+      display:block;
+      filter: drop-shadow(0 2px 0 #ffd1e4);
+    }
+
+    /* 小螢幕微調 */
+    @media (max-width: 480px){
+      .hero{ height: 460px; }
+      .main-nav a{ padding: 9px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO：大背景＋置中文字＋導覽 -->
+  <section class="hero">
+    <img class="hero-img" src="images/latte.jpg" alt="貓咪背景"/>
+
+    <!-- 左上角 IG 連結） -->
+    <a class="ig-link" href="https://www.instagram.com/latte_1130218?igsh=aTBpejNlaHQyOHEy" target="_blank" rel="noopener">🐾 IG</a>
+
+    <div class="hero-content">
+      <h1>🐱你好呀~我是拿鐵</h1>
+
+      <!-- 導覽連結 -->
+      <nav class="main-nav">
+        <a href="about.html">關於我</a>
+        <a href="photos.html">我的照片</a>
+        <a href="videos.html">成長影片</a>
+        <a href="message.html">留言給我</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 頁尾：圖片＋回首頁 -->
+  <footer>
+    <a href="fansclub.html" aria-label="回首頁">
+      <span>回首頁</span>
+    </a>
+  </footer>
+
+</body>
+</html>

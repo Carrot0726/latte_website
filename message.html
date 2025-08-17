@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>留言給我 - 這是拿鐵的專頁唷</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 頁面標題 -->
+  <section class="sub-hero">
+    <h1>💌 留言給拿鐵寶寶呀</h1>
+  </section>
+
+  <!-- 表單 -->
+  <main class="msg-wrap">
+    <div class="msg-card">
+      <h2>想對拿鐵說什麼呢？</h2>
+      <p>快點寫信給拿鐵吧~~ ✨</p>
+
+      <!-- ✅ 已串接 FormSubmit Email Link -->
+      <form action="https://formsubmit.co/el/zopuka" method="POST" class="msg-form">
+        <!-- 隱藏設定 -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="🐱 Latte 網站新留言！">
+        <!-- 送出後跳轉到成功頁（同資料夾） -->
+        <input type="hidden" name="_next" value="success.html">
+        <!-- 蜜罐防垃圾 -->
+        <input type="text" name="_honey" style="display:none">
+
+        <!-- 表單欄位 -->
+        <label>你的名字：
+          <input type="text" name="name" placeholder="例：小紅" required>
+        </label>
+
+        <label>你的 Email：
+          <input type="email" name="email" placeholder="example@mail.com" required>
+        </label>
+
+        <label>留言內容：
+          <textarea name="message" rows="6" placeholder="想對拿鐵說的話..." required></textarea>
+        </label>
+
+        <button type="submit">送出留言 💌</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- 頁尾 -->
+  <footer>
+    <a href="fansclub.html">
+      <span>回首頁</span>
+    </a>
+  </footer>
+
+</body>
+</html>
+
